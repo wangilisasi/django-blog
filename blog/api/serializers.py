@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from blog.models import BlogPost
-#import cv2
+import cv2
 import sys
 import os
 from django.conf import settings
