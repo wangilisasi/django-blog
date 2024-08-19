@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from blog.models import BlogPost
-#import cv2
+import cv2
 import sys
 import os
 from django.conf import settings
@@ -85,6 +85,8 @@ class BlogPostUpdateSerializer(serializers.ModelSerializer):
 		model = BlogPost
 		fields = ['title', 'body', 'image']
 
+
+	#Override the validate method to validate some fileds b4 saving to database
 	def validate(self, blog_post):
 		try:
 			title = blog_post['title']
